@@ -1,0 +1,57 @@
+<div class="terminal">
+  <div class="container">
+    <h3 class="page-title">{{title}}</h3>
+    <form [formGroup]="dataForm" id="searchForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Credit Card Number</label>
+        <input type="number" placeholder="Credit Card Number" class="form-control" formControlName="creditCardNumber" />
+        <p class="text-danger"
+          *ngIf="(dataFormControl.creditCardNumber.touched || submitted) && dataFormControl.creditCardNumber.errors?.required">
+          Credit Card number is required!
+      </p>
+      </div>
+      <div class="form-group">
+        <label>Card holder</label>
+        <input type="text" placeholder="Card Holder" class="form-control" formControlName="cardHolder" />
+        <p class="text-danger"
+          *ngIf="(dataFormControl.cardHolder.touched || submitted) && dataFormControl.cardHolder.errors?.required">
+          Card Holder Name is required!
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Expiration Date</label>
+        <input type="date" placeholder="Expiration Date" class="form-control" formControlName="expirationDate" />
+        <p class="text-danger"
+          *ngIf="(dataFormControl.expirationDate.touched || submitted) && dataFormControl.expirationDate.errors?.required">
+          Card Expiration Date is required!
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Security Code/ CVV</label>
+        <input type="number" placeholder="Security Code/ CVV" class="form-control" formControlName="securityCode" />
+        <p class="text-danger"
+          *ngIf="(dataFormControl.securityCode.touched || submitted) && dataFormControl.securityCode.errors?.required">
+          Security Code is required!
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" placeholder="Enter Amount" class="form-control" formControlName="amount" />
+        <p class="text-danger"
+          *ngIf="(dataFormControl.amount.touched || submitted) && dataFormControl.amount.errors?.required">
+          Amount is required!
+        </p>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Register</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+<svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677"
+  viewBox="0 0 2611.084 485.677">
+  <path id="Path_39" data-name="Path 39"
+    d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z"
+    transform="translate(142.69 -634.312)" fill="#eee" />
+</svg>
