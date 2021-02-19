@@ -1,7 +1,7 @@
 <div class="terminal">
   <div class="container">
     <h3 class="page-title">{{title}}</h3>
-    <form [formGroup]="dataForm" id="searchForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="dataForm" id="searchForm" (ngSubmit)="postData()">
       <div class="form-group">
         <label>Credit Card Number</label>
         <input type="number" placeholder="Credit Card Number" class="form-control" formControlName="creditCardNumber" />
@@ -48,7 +48,6 @@
     </form>
   </div>
 </div>
-
 <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677"
   viewBox="0 0 2611.084 485.677">
   <path id="Path_39" data-name="Path 39"
